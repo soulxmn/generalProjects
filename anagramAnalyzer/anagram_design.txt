@@ -1,0 +1,58 @@
+## File Information
+#**********************************************************
+# Assignment 2 - Recursion and Backtracking 
+# CSC148H5-S: LEC0101 [Tiffany Tong]
+# mirzasul
+# Suleiman 
+# Mirza
+# 1001633155
+# 22:00 5/3/2015
+# 
+# Honour Code: I pledge that this program represents my own 
+# program code and that I have coded on my own. I received
+# help from no one in designing and debugging my program.
+# I have also read the plagiarism section in the course info 
+# sheet of CSC 148 and understand the consequences. 
+#*********************************************************
+
+
+In writing anagram.py, I had to make some important design decisions:
+
+1. Where should I make the reduced dictionary of only relevant words? Outside the recursive function,
+or inside?
+
+2. In checking different possible cases for different combinations in each recursive level, would it
+be better to have condensed multiple if statements (one inside another) or just if statements
+followed by elif statements despite some overlap in conditions?
+
+3. Would it be more efficient to convert all the words in the dictionary to LetterManager, or only
+relevant words?
+
+4. Should I make the word combinations during recursion or after?
+
+Here are my solutions:
+1. I found it more faster to make the reduced dictionary outside of the recursive function. 
+This is because it avoids having to go over all the other words and checking if they need to be 
+added more than once to the reduced dictionary. If I were to do it inside the function, then
+that would mean every time I encounter a plausible word for being in an anagram set, I would have
+to re-go all of the dictionary to find that word again, and then convert it to LetterManager and 
+add it to the reduced dictionary. That's why going through all of them at once and making the reduced
+dictionary before hand, enabled my recursive function to process the phrase faster.
+
+2. It turned out to be faster to just use multiple if statements rather than embedded ones, because 
+even though they overlap a bit, the program is quickly able to ascertain where it needs to go before
+moving on to the next if statement. When I tried embedded if statements it turned out they took a bit
+longer because the program had to back up the if-statement directory it followed and then move on 
+to the next one. Hence I didn't write many embedded if statements.
+
+3. I realized these are exactly the same thing because we didn't have an alternative to actually
+see if a word is relevant without converting it to LetterManager first.
+
+4. It turned out to be hands down much faster to make the word combinations after recursion, rather 
+than forcibly checking each potential (not all, only potential) group of anagrams, and then having
+to do it again in the same recursion process when they came up in a different order! So I instead
+just gathered all the ones that appeared and ignored the ones I new would be just a rearranged order.
+This way outside I was able to make as many combinations as I liked using itertools permutations
+method, without having to go about it the long way in my recursion function.
+
+These are the design decisions I faced whilst making this anagram.py.
