@@ -1,0 +1,17 @@
+;;;  [20080401] (air)  New dict file format introduced
+;;;   - comments (like this section) are allowed
+;;;   - file name is major version; vers/rev information is now in the header
+;;;
+;;;
+A  AH0
+A'S  EY1 Z
+A.'S  EY1 Z
+A.S  EY1 Z
+A42128  EY1 F AO1 R T UW1 W AH1 N T UW1 EY1 T
+A  AH0
+AARDVARK  AA1 R D V AA2 R K
+AARON  EH1 R AH0 N
+AARON'S  EH1 R AH0 N Z
+AARONS  EH1 R AH0 N Z
+AARONSON  EH1 R AH0 N S AH0 N
+AARONSON'S  EH1 R AH0 N S AH0 N Z
