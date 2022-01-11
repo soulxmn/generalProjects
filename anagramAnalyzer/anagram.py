@@ -2,11 +2,7 @@
 #**********************************************************
 # Assignment 2 - Recursion and Backtracking 
 # CSC148H5-S: LEC0101 [Tiffany Tong]
-# mirzasul
-# Suleiman 
-# Mirza
-# 1001633155
-# 22:00 2/3/2015
+# [REDACTED]
 # 
 # Honour Code: I pledge that this program represents my own 
 # program code and that I have coded on my own. I received
